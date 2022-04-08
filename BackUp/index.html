@@ -1,0 +1,36 @@
+<form id="formD" name="formD" action="" method="post" enctype="multipart/form-data">
+	<table class="table table-bordered table-hover table-sm display nowrap" id="dataTable" width="100%" cellspacing="0">
+		<tbody>
+			<tr>
+				<th>Harga Satuan</th>
+				<th>Jumlah</th>
+				<th>VAT</th>
+				<th>Harga keseluruhan</th>
+				<th>Harga keseluruhan 2</th>
+			</tr>
+			<tr>
+			 <td><input type="text" name="harga" onkeyup="OnChange(this.value)" onKeyPress="return isNumberKey(event)"></td>
+			 <td><input type="text" name="jmlpsn" onkeyup="OnChange(this.value)" onKeyPress="return isNumberKey(event)"></td>
+			 <td><input type="text" name="vat" onkeyup="OnChange(this.value)" onKeyPress="return isNumberKey(event)" value="550" readonly="read"></td>
+			 <td><input type="text" name="txtDisplay" value="" readonly="readonly"></td>
+			 <td><input type="text" name="txtDisplay1" value="" readonly="readonly"></td>
+			</tr>
+		</tbody>
+   </table>
+</form>
+ 
+<script type="text/javascript" language="Javascript">
+
+
+   function OnChange(value){
+     hargasatuan = document.formD.harga.value;
+     jumlah = document.formD.jmlpsn.value;
+     vat = document.formD.vat.value;
+
+     total = parseInt(hargasatuan) * parseInt(jumlah) + parseInt(vat);
+     document.formD.txtDisplay.value = total;
+
+     total1 = parseInt(total) + parseInt(vat);
+     document.formD.txtDisplay1.value = total1;
+   }
+ </script>

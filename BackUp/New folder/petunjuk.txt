@@ -1,0 +1,3 @@
+1. Buat database tutorial dan load data sales.sql
+2. copy file hitung_total_subtotal.php ke folder htdocs
+3. Jalankan file tersebut dengan mengetikkan http://localhost/hitung_total_subtotal.php pada browser
